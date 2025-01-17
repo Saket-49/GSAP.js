@@ -1,0 +1,206 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body{
+    height: auto;
+    background-image: url(discord.bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#icon{
+    font-size: 5vw;
+    margin-left: 20px;
+}
+.jjf{
+    color: white;
+    font-size: 4vw;
+}
+.menu{
+    color: lawngreen;
+}
+.cursorAnim{
+    border-radius: 50%;
+    position: absolute;
+    opacity:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sp{
+    font-size: 15vw;
+    opacity: 0;
+}
+.jj{
+    scroll-behavior: smooth;
+    height: 80dvh;
+}
+.spcnt{
+    padding-top: 120px;
+}
+
+.bn{
+    transform: rotate(90deg);
+    transform-origin: left;
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+}
+
+.btn{
+    position: relative;
+    top: 20px;
+    height: 30px;
+    width: 200px;
+    font-size: smaller;
+    border-radius: 14px;
+    z-index: 10;
+}
+.btn2{
+    /* top: 20px; */
+    height: 30px;
+    width: 200px;
+    font-size: smaller;
+    border-radius: 14px;
+    z-index: 13;
+}
+#string{
+    height: 300px;
+    width: 100vw;
+    z-index: 14;
+    position: absolute;
+}
+
+.p3{
+    height: 500dvh;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+}
+.hs{
+    color: lawngreen;
+}
+.jjf{
+    opacity: 0;
+}
+.ccnnt{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+.ccnnt2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+.gola{
+    height: 14px;
+    width: 14px;
+    background-color: rgb(215, 252, 3);
+    border-radius: 50%;
+}
+.gola2{
+    height: 14px;
+    width: 14px;
+    background-color: rgb(215, 252, 3);
+    border-radius: 50%;
+}
+.fw{
+    color: white;
+    font-size: 7vw;
+    position: relative;
+    top: 20vw;
+    left: 12vw;
+    margin-bottom: 5vw;
+}
+.wavy-text{
+    opacity: 0;
+}
+.timages{
+    position: absolute;
+    right: 3.5vw;
+    height: 70vw;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 10;
+}
+.bimages{
+    position: relative;
+    top: 52vw;
+    right: 10vw;
+    height: 70vw;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 10;
+}
+.cntt1{
+    height: 62vh;
+    width: 35vw;
+    overflow: hidden;
+    border-radius: 3vw;
+    border:2px solid white;
+    position: relative;
+}
+.cntt2{
+    height: 62vh;
+    width: 35vw;
+    overflow: hidden;
+    border-radius: 3vw;
+    border:2px solid white;
+    position: relative;
+}
+.cntt3{
+    height: 62vh;
+    width: 35vw;
+    overflow: hidden;
+    border-radius: 3vw;
+    border:2px solid white;
+    position: relative;
+}
+.cntt4{
+    height: 62vh;
+    width: 35vw;
+    overflow: hidden;
+    border-radius: 3vw;
+    border:2px solid white;
+    position: relative;
+}
+#mt{
+    object-position: center;
+}
+.imggcntt{
+    height: 100vh;
+    width: 100vw;
+    overflow: visible;
+}
+.linecnt{
+    height: 400px;
+    width: 100dvw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#ss{
+    color: white;
+    width: 50%;
+    margin-right: 20vw;
+}
+/* .btn2:hover{
+    background-color: lawngreen;
+} */
