@@ -39,7 +39,7 @@ window.addEventListener('scroll', () => {
     allSpanDesign.forEach((span) => {
         if (window.scrollY >= 120) {
             menu.style.transform= 'scale(0.85)'
-            span.style.color= 'red'
+            span.style.color= '#22c1a4'
         } else {
              menu.style.transform= 'scale(1)'
              span.style.color = 'black'
@@ -48,33 +48,33 @@ window.addEventListener('scroll', () => {
 });
 
 
-v = document.querySelectorAll('.v')
-mo = document.querySelectorAll('.mo')
+// v = document.querySelectorAll('.v')
+// mo = document.querySelectorAll('.mo')
 
-v.forEach((elem)=>{
-    elem.addEventListener('mouseenter',()=>{
-        mo.forEach((mol)=>{
-            gsap.to(mol,{
-                y:-20,
-                duration:1,
-                stagger:1
-            })
-        })
+// v.forEach((elem)=>{
+//     elem.addEventListener('mouseenter',()=>{
+//         mo.forEach((mol)=>{
+//             gsap.to(mol,{
+//                 y:-20,
+//                 duration:1,
+//                 stagger:1
+//             })
+//         })
         
         
-    })
-})
-v.forEach((elem)=>{
-    elem.addEventListener('mouseleave',()=>{
-        mo.forEach((mol)=>{
-            gsap.to(mol,{
-                y:0,
-                duration:1,
-                stagger: -1
-            })
-        })
-    })
-})
+//     })
+// })
+// v.forEach((elem)=>{
+//     elem.addEventListener('mouseleave',()=>{
+//         mo.forEach((mol)=>{
+//             gsap.to(mol,{
+//                 y:0,
+//                 duration:1,
+//                 stagger: -1
+//             })
+//         })
+//     })
+// })
 const iki = document.querySelector('.iki')
 jjf = document.querySelectorAll('.jjf')
 jjf.forEach((elem)=>{
@@ -121,7 +121,7 @@ btn.addEventListener('mouseleave', () => {
 });
 const btn2 = document.querySelector('.btn2');
 const gola2 = document.querySelector('.gola2')
-btn.addEventListener('mouseenter', () => {
+btn2.addEventListener('mouseenter', () => {
     gsap.to(gola2, {
         height : 140,
         width: 200,
@@ -134,7 +134,7 @@ btn.addEventListener('mouseenter', () => {
     })
 });
 
-btn.addEventListener('mouseleave', () => {
+btn2.addEventListener('mouseleave', () => {
     gsap.to(gola2, {
         height : 14,
         width:14,
@@ -185,7 +185,7 @@ cnt2 = document.querySelector('.cntt2')
 cnt3 = document.querySelector('.cntt3')
 cnt4 = document.querySelector('.cntt4')
 cnt1.addEventListener('mouseenter',()=>{
-    cursor.innerText = 'spiderman hi to hai yeh'
+    cursor.innerText = 'click here'
     gsap.to(cursor,{
         height:20,
         width:200,
@@ -205,7 +205,7 @@ cnt1.addEventListener('mouseleave',()=>{
     
 })
 cnt2.addEventListener('mouseenter',()=>{
-    cursor.innerText = 'willy model 84'
+    cursor.innerText = 'click here'
     gsap.to(cursor,{
         height:20,
         width:200,
@@ -225,7 +225,8 @@ cnt2.addEventListener('mouseleave',()=>{
     
 })
 cnt3.addEventListener('mouseenter',()=>{
-    cursor.innerText = 'this is a willys logo'
+    cursor.innerText = 'follow our work'
+    cursor.style.color = "#22c1a4"
     gsap.to(cursor,{
         height:20,
         width:200,
@@ -236,6 +237,7 @@ cnt3.addEventListener('mouseenter',()=>{
 })
 cnt3.addEventListener('mouseleave',()=>{
     cursor.innerText = ''
+
     gsap.to(cursor,{
         height:12,
         width:12,
@@ -245,7 +247,7 @@ cnt3.addEventListener('mouseleave',()=>{
     
 })
 cnt4.addEventListener('mouseenter',()=>{
-    cursor.innerText = 'similar mindset '
+    cursor.innerText = 'follow our work'
     gsap.to(cursor,{
         height:20,
         width:200,
@@ -290,4 +292,52 @@ stringg.addEventListener("mouseleave", () => {
     });
 });
 
-//saket  sharma is a grat engineer . He drives a willy's jeep 1993 model 
+
+auuu = document.querySelector('.auuu');
+auuu.addEventListener('click', () => {
+    location.href = "au.htm"; 
+});
+
+pis = document.querySelector('#pis')
+pis.addEventListener('click', ()=>{
+    location.href = "https://www.google.com/"
+})
+piss = document.querySelector('#piss')
+piss.addEventListener('click', ()=>{
+    location.href = "https://www.google.com/"
+})
+pisss = document.querySelector('#pisss')
+pisss.addEventListener('click', ()=>{
+    location.href = "https://www.google.com/"
+})
+
+
+au = document.querySelector('.auuu')
+
+au.addEventListener('click',()=>{
+    location.href = 'au.htm'
+})
+bnbn = document.querySelector('.bnbn')
+
+bnbn.addEventListener('click',()=>{
+    location.href = 'donate.htm'
+})
+
+nnne = document.querySelector('.nnne')
+nnne.addEventListener('click',()=>{
+    location.href = 'new.htm'
+})
+
+oll = document.querySelector('.oll')
+
+oll.addEventListener('click',()=>{
+    location.href = 'p4.html'
+})
+
+cnnn = document.querySelector('.cnnn')
+
+cnnn.addEventListener('click',()=>{
+    location.href = 'gapi.htm'
+}
+
+)

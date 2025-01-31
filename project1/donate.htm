@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="rws.css"> -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement(
+            {pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
+            'google_translate_element'
+          );
+        }
+      </script>
+      <script type="text/javascript" 
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+      </script>
+      <script>
+        (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="TApm3tReUZ4vK8yGk4iBx";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+        </script>
+
+
+<style>
+    .mo{
+        opacity: 1;
+    }
+    *{
+        color: black;
+    }
+</style>
+</head>
+<body>
+    <div class="cursorAnim absolute bg-gray-500 h-3 w-3  z-20"></div>
+
+
+    
+         <div class="bgg2  flex flex-col justify-between   top-0 z-10 ">
+            <div class="flex fixed jj justify-between p-4 top-0 w-full ">
+                <i id="icon" id="cli" class="ri-restaurant-line"></i>
+                <div class="menu fixed h-52 w-36 top-0 right-3 flex flex-col justify-evenly mt-6 z-30">
+                    
+                    <div class="v h-6">
+                        <h3 class="mo auuu" onclick="Location.href = 'au.htm'" id="cli">ABOUT US</h3> 
+                        <!-- <h3 class="mo auuu" onclick="Location.href = 'au.htm'">ABOUT US</h3>  -->
+                    </div>
+                    <div class="v h-6">
+                        <h3 class="mo l1" id="cli">CONNECTIONS</h3>
+                        <!-- <h3 class="mo">CONNECTIONS</h3> -->
+                    </div>
+                    <div class="v h-6">
+                        <h3 class="mo l2" id="cli">FOOD WASTE</h3>
+                        <!-- <h3 class="mo">FOOD WASTE</h3> -->
+                    </div>
+                    <div class="v h-6">
+                        <h3 class="mo l3" id="cli">NEWS & EVENTS</h3>
+                        <!-- <h3 class="mo">NEWS & EVENTS</h3> -->
+                    </div>    
+                    <div class="v h-6">
+                        <h3 class="mo l4" id="cli">HOME</h3>
+                        <!-- <h3 class="mo">DONATE</h3> -->
+                    </div>
+                   
+                </div>  
+                <div id="cli" class="absolute top-60 left-16 transform -translate-y-1/2 rotate-90 origin-left text-white text-lg font-medium overflow-visible">
+                    hello@fssai.nl
+                </div>      
+        </div>
+        
+        
+        <div class="text-container flex-col pt-28 pl-3">
+            <span style="font-size: 5vw; padding-left: 80px; " class="pt-10">NOBODY</span><br>
+            <span style="font-size: 5vw; padding-left: 80px; " class="pt-36">BECOME</span><br>
+            <span style="font-size: 5vw; padding-left: 80px; " class="pt-10">POOR BY</span><br>
+            <span style="font-size: 5vw; padding-left: 80px; " class="pt-10">GIVING</span><br>
+        </div>
+        
+        
+
+        
+          <div  class="rws pt-36 flex justify-center align-middle absolute h-full w-full">
+            <img src="payqr.png"  style="height: 300px; width: 300px;">
+          </div>
+
+
+          
+        
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+            // GSAP Animation
+            gsap.from(".text-container span", {
+                opacity: 0,
+                y: 50,
+                duration: 1.5,
+                stagger: 0.5,  // Stagger the animations so they appear one by one
+                ease: "power4.out"  // Ease out for a smooth transition
+            });
+
+            v = document.querySelectorAll('.v')
+mo = document.querySelectorAll('.mo')
+
+// v.forEach((elem)=>{
+    
+        mo.forEach((mol)=>{
+            gsap.from(mol,{
+                x:50,
+                opacity: 0,
+                duration:1.8,
+                stagger:1
+            })
+        })
+        
+        
+    // })
+
+v.forEach((elem)=>{
+    elem.addEventListener('mouseleave',()=>{
+        mo.forEach((mol)=>{
+            gsap.to(mol,{
+                y:0,
+                duration:1,
+                stagger: -1
+            })
+        })
+    })
+})
+l1 = document.querySelector('.l1')
+
+l1.addEventListener('click',()=>{
+    location.href = 'gapi.htm'
+
+})
+l2 = document.querySelector('.l2')
+
+l2.addEventListener('click',()=>{
+    location.href = 'p4.html'
+})
+l3 = document.querySelector('.mo l3')
+
+l3.addEventListener('click',()=>{
+    location.href = 'au.htm'
+})
+l4 = document.querySelector('.mo l4')
+
+l4.addEventListener('click',()=>{
+    location.href = 'index.htm'
+})
+
+
+        </script>
+    
+</body>
+</html>

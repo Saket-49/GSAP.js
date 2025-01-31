@@ -7,10 +7,11 @@
 
 body{
     height: auto;
-    background-image: url(discord.bg.png);
+    background-image: url(n.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
 }
 #icon{
     font-size: 5vw;
@@ -20,8 +21,13 @@ body{
     color: white;
     font-size: 4vw;
 }
+.fggf{
+    position: relative;
+    /* top: 30px; */
+}
 .menu{
-    color: lawngreen;
+    color: black;
+    z-index: 20;
 }
 .cursorAnim{
     border-radius: 50%;
@@ -63,7 +69,6 @@ body{
     z-index: 10;
 }
 .btn2{
-    /* top: 20px; */
     height: 30px;
     width: 200px;
     font-size: smaller;
@@ -71,14 +76,16 @@ body{
     z-index: 13;
 }
 #string{
-    height: 300px;
+    height: 100px;
     width: 100vw;
     z-index: 14;
-    position: absolute;
+    position: relative;
+    bottom: 10vw;
+    
 }
 
 .p3{
-    height: 500dvh;
+    height: 420dvh;
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
 }
@@ -149,7 +156,7 @@ body{
     z-index: 10;
 }
 .cntt1{
-    height: 62vh;
+    height: 42vh;
     width: 35vw;
     overflow: hidden;
     border-radius: 3vw;
@@ -157,7 +164,7 @@ body{
     position: relative;
 }
 .cntt2{
-    height: 62vh;
+    height: 42vh;
     width: 35vw;
     overflow: hidden;
     border-radius: 3vw;
@@ -201,6 +208,845 @@ body{
     width: 50%;
     margin-right: 20vw;
 }
-/* .btn2:hover{
-    background-color: lawngreen;
+
+.p4{
+    position: relative;
+    bottom: 10vw;
+    background-color: white;
+}
+
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: sans-serif;
+    
+}
+
+.body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(discord.bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: static;
+    z-index: -1001;
+
+}
+.nav {
+    height: 80px;
+    width: calc(100vw - 200px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px 100px;
+    position: relative;
+}
+.logo {
+    height: 80px;
+    width: 190px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.ddd {
+    height: 34px;
+    width: 140px;
+}
+
+.anchors {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.a-an {
+    height: 34px;
+    width: 100px;
+    margin: 0px 10px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.a-an:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.btnod {
+    height: 80px;
+    width: 180px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+}
+.bod {
+    height: 40px;
+    width: 180px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.bod:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+
+/* hero section  */
+
+.hero {
+    height: 700px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin: 50px 40px 50px;
+    position: relative;
+}
+.left-hero {
+    padding-top: 150px;
+    height: 550px;
+    width: 580px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.heading {
+    height: auto;
+    width: 396px;
+    color: white;
+    font-size: 43.2px;
+    font-family: myfont;
+    
+
+}
+@font-face {
+    font-family: myfont;
+    src: url(Bernie.otf);
+}
+
+.hero-para {
+    height: 155px;
+    width: 396px;
+    color: white;
+    font-size: 1.4rem;
+    margin: 32px 0px;
+}
+
+.left-img {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/* c-p {
+    position: absolute;
+    top: 150px;
+    left: 60px;
 } */
+
+.btn2 {
+    height: 70px;
+    width: calc(100vw-100px);
+    margin: 0px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.dfw {
+    height: 60px;
+    width: 350px;
+    background-color: white;
+    color: rgb(87, 85, 85);
+    border: none;
+    border-radius: 27px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    margin-right: 20px;
+}
+#icond {
+    padding-right: 10px;
+    color: black;
+}
+
+.odb {
+    height: 60px;
+    width: 350px;
+    /* background-color: #]; */
+    color: white;
+    border: none;
+    border-radius: 27px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    margin-right: 10px;
+}
+   /* section 1  */
+.s1 {
+    height: 850px;
+    width: 100vw;
+    position: relative;
+    z-index: 2;
+}
+.hhh {
+    height: 600px;
+    width: calc(100vw - 100px);
+    margin: 0px 50px;
+    border: 5px solid grey;
+    border-radius: 80px;
+    background-color: blueviolet;
+    backdrop-filter: blur(20px);
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    top: 50px;
+    box-sizing: content-box;
+}
+
+#img-mc {
+    height: 700px;
+    width: auto;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    right: 70px;
+}
+
+.emt-box {
+    height: 600px;
+    width: 60%;
+    background-color: #161cbb;
+    border-radius: 80px;
+}
+
+#mh {
+    position: absolute;
+    top: 20px;
+    right: 200px;
+}
+
+.hhh-content {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.ch1 {
+    color: white;
+    font-family: myfont;
+    font-size: 3rem;
+    width: 500px;
+    padding: 5px;
+    text-transform: uppercase;
+}
+.pc1 {
+    padding: 5px;
+    font-size: 22.4px;
+    font-family: sans-serif;
+    width: 380px;
+    margin-top: 16px;
+    color: white;
+    line-height: 32px;
+}
+
+.s2 {
+    height: 850px;
+    width: 100vw;
+    position: relative;
+}
+
+
+.hhh2 {
+    height: 600px;
+    width: calc(100vw - 100px);
+    margin: 0px 50px;
+    border: 5px solid grey;
+    border-radius: 80px;
+    background-color: blueviolet;
+    backdrop-filter: blur(20px);
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    top: 50px;
+    box-sizing: content-box;
+}
+.ch2 {
+    color: white;
+    padding: 5px;
+    font-family: myfont;
+    font-size: 3rem;
+    width: 500px;
+    text-transform: uppercase;
+}
+.pc2 {
+    font-size: 25px;
+    font-family: sans-serif;
+    width: 400px;
+    margin-top: 16px;
+    color: white;
+    line-height: 32px;
+}
+.content {
+    width: 50%;
+    margin-left: 50px;
+}
+.image {
+    background-color: pink;
+    width: 100%;
+    height: 100%;
+    margin: 0px 0px 0px 100px;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    position: relative;
+}
+#imgg {
+    position: absolute;
+    right: 20px;
+}
+#mh1 {
+    position: absolute;
+    top: 8px;
+    right: 0px;
+}
+#img-mc1 {
+    height: 600px;
+    width: auto;
+    position: absolute;
+    top: 120px;
+    left: 50px;
+}
+.animation-line{
+    background-color: rgb(44, 138, 226);
+    height: 200px;
+    width: 100vw;
+    margin-bottom: 200px;
+    animation-name: linemation;
+    animation-timing-function: linear;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes linemation {
+    from {right: 0px;}
+    to {left: 0px;}
+}
+
+.line-con {
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    animation-name: linemation;
+    animation-timing-function: linear;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.chat {
+    color: white;
+    font-family: myfont;
+    font-size: 28px;
+    width: 100px;
+    animation-name: linemation;
+    animation-timing-function: linear;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes linemation {
+    from {right: 0px;}
+    to {right: 100px;}
+}
+.h-o {
+    color: white;
+    font-family: myfont;
+    font-size: 28px;
+    width: 200px;
+}
+.talk {
+    color: white;
+    font-family: myfont;
+    font-size: 28px;
+    width: 100px;
+}
+.play {
+    color: white;
+    font-family: myfont;
+    font-size: 28px;
+    width: 100px;
+}
+
+/* section 4 */
+
+
+#imgg2 {
+    position: absolute;
+    top: 80px;
+    right: 0px;
+}
+
+/* section 5  */
+
+.emt-box2 {
+    height: 600px;
+    width: 60%;
+    background-color: #161cbb;
+    border-radius: 80px;
+    background-image: url(yt.webp);
+}
+
+#man2 {
+    position: absolute;
+    top: 0px;
+    right: 150px;
+    z-index: -1;
+}
+
+#ge {
+    position: absolute;
+    top: 0px;
+    right: 330px;
+}
+/* section 6  */
+
+.imagex {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    margin: 0px 0px 0px 100px;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SECTIONS END  */
+.fhero {
+    width: 100vw;
+    position: relative;
+    height: auto;
+}
+.f-hing {
+    height: 200px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.ul {
+    font-family: myfont;
+    color: white;
+    font-size: 35px;
+}
+.ll{
+    font-family: myfont;
+    color: white;
+    font-size: 35px;
+}
+
+.dfwb{
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#dfw{
+    background-color: rgb(66, 141, 212);
+    text-decoration: none;
+    font-size: 20px;
+    height: 60px;
+    width: 350px;
+    text-align: center;
+    border-radius: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#icond2 {
+    padding-right: 10px;
+    color: white;
+}
+.imgctn {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#fdcw {
+    width: 99%;
+    height: auto;
+}
+#discc {
+    position: absolute;
+    top: 425px;
+    right: 45%;
+}
+
+#leafoh {
+    position: absolute;
+    top: 310px;
+    right: 48.5%;
+}
+
+.last-option {
+    width: 100vw;
+    height: auto;
+    border-top: 4px solid rgb(107, 101, 101, 0.5);
+    background-color: white;
+    color: black;
+}
+.maincnt {
+    width: calc(100vw - 200px);
+    height: auto;
+    margin: 100px 100px;
+    display: flex;
+    flex-direction: row;
+    color: black;
+    /* justify-content: start; */
+    
+}
+.rcnt {
+    width: 40%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    color: black;
+
+}
+.scnt {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+#my {
+    margin-left: 4px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: 30px;
+    font-size: 22px;
+    color: black;
+}
+
+.dead-end {
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    margin-top: 20px;
+}
+#a10 {
+    color: black;
+    font-size: 30px;
+}
+.line1f {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+.h4l1 {
+    margin-bottom: 30px;
+    color: black;
+}
+#pixelated {
+    color: black;
+    margin-top: 10px;
+    text-decoration: none;
+    width: 300px;
+}
+
+#pixelated:hover {
+    text-decoration: underline;
+}
+
+.zindagi {
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #5f289e;
+    padding-top: 50px;
+}
+.kharab {
+    width: 100%;
+    background-color: #5f289e;
+}
+.ho {
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#chuki {
+    margin-left: 120px;
+}
+
+#hai {
+    margin-left: 1000px;
+    background-color: rgb(61, 61, 241);
+    color: black;
+    border-radius: 30px;
+    height: 50px;
+    width: 120px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 120px;
+    font-weight: 600;
+}
+#crownwaliimg {
+    position: absolute;
+    top: 100px;
+    left: 130px;
+    animation-name: pehlianimation;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+@keyframes pehlianimation {
+    from {top: 100px;
+    height: 150px;
+width: 150px;
+transform: rotate(0deg);}
+    to {top: 0px;
+    height: 200px;
+width: 200px;
+transform: rotate(30deg);}
+}
+#trophywali {
+    position: absolute;
+    top: 0px;
+    left: 500px;
+    animation-name: dusrianimation;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 3s;
+}
+@keyframes dusrianimation {
+    from {top: 0px;
+    transform: rotate(0deg);}
+    to {top: 50px;
+    transform: rotate(56deg);}
+}
+/* #applewali {
+    position: absolute;
+    top: 100px;
+    right: 650px;
+    animation-name: tisrianimation;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 0.5s;
+}
+
+@keyframes tisrianimation {
+    from {top: 100px;}
+    to {top: 200px;}
+} */
+#starwali {
+    position: absolute;
+    top: 0px;
+    right: 40px;
+    animation-name: chothianimation;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 0s;
+}
+@keyframes chothianimation {
+from {opacity: 0;
+top: 0px;}
+to {opacity: 1;
+top: 50px;}
+}
+
+#twinklewali {
+    position: absolute;
+    top: 0px;
+    right: 700px;
+    animation-name: panchvianimation;
+    animation-duration: 7s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 0s;
+}
+@keyframes panchvianimation {
+ from {opacity: 0;
+height: 16px;
+width: 20px;}
+to {opacity: 1;
+height: 32px;
+width: 30px;}
+}
+#twinklewali2 {
+    position: absolute;
+    top: 120px;
+    right: 780px;
+    animation-name: chhatianimation;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 0s;
+    transform: rotate(35deg) ;
+}
+
+@keyframes chhatianimation {
+    from {
+        opacity: 0.6;
+        height: 26px;
+        width: 20px;
+        right: 780px;
+    }
+    to {
+        opacity: 1;
+        height: 38px;
+        width: 29px;
+        right: 740px;
+    }
+}
+
+
+#navtwinkle {
+    position: absolute;
+    top: 20px;
+    left: 160px;
+    animation-name: firstanimation;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 0s;
+}
+@keyframes firstanimation{
+    from {left: 160px;
+    top: 20px;}
+    to {
+        left: 200px;
+        top: 40px;
+    }
+
+}
+#navstar {
+    position: absolute;
+    top: 0px;
+    left: 400px;
+    animation-name: scanimation;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-delay: 2s;
+}
+@keyframes scanimation {
+    from {
+        top: 0px;
+        left: 400px;
+    }
+    to {
+        top: 10px;
+        left: 420px;
+    }
+}
+#navtwinkle1 {
+    position: absolute;
+    top: 0px;
+    right: 60px;
+    animation-name: loveanimation;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 0s;
+}
+@keyframes loveanimation{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+#navtwinkle2 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    animation-name: isanimation;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 2s;
+}
+@keyframes isanimation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+
+.p4{
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}

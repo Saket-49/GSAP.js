@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop In & Pop Out Effect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        body {
+            background: url('background.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 100px;
+            background-color: rgba(199, 251, 167, 0.9);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+        .sidebar .d {
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            transition: all 0.3s ease-in-out;
+        }
+        .sidebar .d a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+        .sidebar .d:hover {
+            background-color: #a2d5a1;
+        }
+        .sidebar .d:hover a {
+            color: white;
+        }
+        .pop-in {
+            animation: popIn 0.3s ease-out forwards;
+        }
+        .pop-out {
+            animation: popOut 0.2s ease-in forwards;
+        }
+        @keyframes popIn {
+            0% { transform: scale(0.8); }
+            80% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        @keyframes popOut {
+            0% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        #search-container {
+            display: flex;
+            justify-content: center;
+            background-color:rgba(199, 251, 167, 0.9);
+            margin:0%;
+            padding:20px;
+            width: 100%;
+        }
+        #search-box {
+            width: 300px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 15px;
+            margin-left: 10px;
+            border: none;
+            background-color: #65fe08;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background-color: #b6f290;
+            color: black;
+        }
+        #map {
+            width: 80%;
+            height: 600px;
+            margin-top:10px;
+            margin-left:50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="d"><img src="P4A.png" alt="p4a" height="60px"></div>
+        <div class="d" id="d2"><a href="index.htm">Home</a></div>
+        <div class="d" id="d3"><a href="donate.htm">Donate</a></div>
+        <div class="d" id="d4"><a href="new.htm">Stories</a></div>
+        <div class="d" id="d5"><a href="au.htm">AboutUs</a></div>
+        <div class="d" id="d6"><a href="gapi.htm">Connections</a></div>
+    </nav>
+    
+    <div id="search-container">
+        <input id="search-box" type="text" placeholder="Enter a location">
+        <button onclick="searchLocation()">Search</button>
+    </div>
+
+    <h1 style="color: white; text-align: center;">Nearby NGOs</h1>
+    <hr>
+
+    <div id="map"></div>
+
+    <script>
+        const divs = document.querySelectorAll(".d");
+        divs.forEach(div => {
+            div.addEventListener("mouseenter", () => {
+                div.classList.remove("pop-out"); 
+                div.classList.add("pop-in"); 
+            });
+            div.addEventListener("mouseleave", () => {
+                div.classList.remove("pop-in"); 
+                div.classList.add("pop-out"); 
+            });
+        });
+    </script>
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApC90T0ommAfzouOPf9zSIYICwQhBTpNs&libraries=places&callback=initMap" async defer></script>
+    
+     <script>
+         let map;
+         let autocomplete;
+         
+         function initMap() {
+             const center = { lat: 28.6139, lng: 77.2090 }; // Default location (Delhi, India)
+             map = new google.maps.Map(document.getElementById("map"), {
+                 center: center,
+                 zoom: 14,
+             });
+             autocomplete = new google.maps.places.Autocomplete(
+                 document.getElementById("search-box")
+             );
+             autocomplete.addListener("place_changed", () => {
+                 const place = autocomplete.getPlace();
+                 if (place.geometry) {
+                     map.setCenter(place.geometry.location);
+                     searchNearby(place.geometry.location);
+                 }
+             });
+             searchNearby(center);
+         }
+ 
+         function searchLocation() {
+             const address = document.getElementById("search-box").value;
+             const geocoder = new google.maps.Geocoder();
+ 
+             geocoder.geocode({ address: address }, (results, status) => {
+                 if (status === "OK") {
+                     const location = results[0].geometry.location;
+                     map.setCenter(location);
+                     searchNearby(location);
+                 } else {
+                     alert("Location not found: " + status);
+                 }
+             });
+         }
+         function searchNearby(location) {
+             const service = new google.maps.places.PlacesService(map);
+             service.nearbySearch(
+                 {
+                     location: location,
+                     radius: 5000,
+                     keyword: "NGO"
+                 },
+                 (results, status) => {
+                     if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+                         results.forEach((place) => {
+                             addMarker(place);
+                         });
+                     } else {
+                         console.error("Places request failed: " + status);
+                     }
+                 }
+             );
+         }
+         function addMarker(place) {
+             const marker = new google.maps.Marker({
+                 map: map,
+                 position: place.geometry.location,
+                 title: place.name
+             });
+             const infowindow = new google.maps.InfoWindow({
+                 content: `<strong>${place.name}</strong><br>${place.vicinity}`
+             });
+ 
+             marker.addListener("click", () => {
+                 infowindow.open(map, marker);
+             });
+         }
+     </script>
+</body>
+</html>
